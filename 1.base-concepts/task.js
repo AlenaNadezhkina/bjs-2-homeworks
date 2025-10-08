@@ -20,7 +20,6 @@ function solveEquation(a, b, c) {
 		return [x];
 	} else {
 		return [];
-		return "Нет действительных корней";
 	}
 }
 
