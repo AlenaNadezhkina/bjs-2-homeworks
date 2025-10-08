@@ -1,26 +1,27 @@
 "use strict";
 
 function solveEquation(a, b, c) {
-  let arr = [];
-  if (a === 0) {
-    if (b === 0) {
-      arr.push(c === 0);
-    } else {
-      arr.push(-c / b)
-    }
-  }
-  const D = b * b - 4 * a * c;
-  if (D < 0) {
-    return false;
-  } else if (D === 0) {
-    const x = -b / (2 * a);
-    arr.push(x);
-  } else if (D > 0) {
-    const x1 = (-b + Math.sqrt(D)) / (2 * a);
-    const x2 = (-b - Math.sqrt(D)) / (2 * a);
-    arr.push(x1, x2)
-  }
-  return arr
+	if (a === 0) {
+		if (b === 0) {
+			return c === 0
+		} else {
+			return [-c / b];
+		}
+	}
+
+	const discriminant = b * b - 4 * a * c;
+
+	if (discriminant > 0) {
+		const x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+		const x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+		return [x1, x2];
+	} else if (discriminant === 0) {
+		const x = -b / (2 * a);
+		return [x];
+	} else {
+		return [];
+		return "Нет действительных корней";
+	}
 }
 
 
