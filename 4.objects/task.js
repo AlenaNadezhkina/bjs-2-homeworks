@@ -12,7 +12,7 @@ Student.prototype.addMarks = function(...marks) {
 		this.marks.push(...marks);
 	}
 	if (!this.marks) {
-		console.log(`Студент отчислен`);
+		this.marks = null;
 		return;
 	}
 }
