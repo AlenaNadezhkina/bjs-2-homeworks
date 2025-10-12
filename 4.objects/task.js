@@ -12,7 +12,7 @@ Student.prototype.addMarks = function(...marks) {
 		this.marks.push(...marks);
 	}
 	if (this.marks === undefined) {
-		return 0;
+		this.marks = [mark];
 	}
 }
 Student.prototype.getAverage = function() {
