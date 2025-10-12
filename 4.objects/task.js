@@ -12,12 +12,12 @@ Student.prototype.addMarks = function(...marks) {
 		this.marks.push(...marks);
 	}
 	if (this.marks === undefined) {
-		return;
+		return 0;
 	}
 }
 Student.prototype.getAverage = function() {
 	if (this.marks.length === 0) {
-		return;
+		return 0;
 	} else {
 		const sum = this.marks.reduce((acc, mark) => acc + mark, 0);
 		return sum / this.marks.length;
