@@ -8,7 +8,9 @@ Student.prototype.setSubject = function(subjectName) {
 	this.subject = subjectName;
 }
 Student.prototype.addMarks = function(...marks) {
-	if (this.marks) {
+	if (!this.marks) {
+		return;
+	} else {
 		this.marks.push(...marks);
 	}
 }
