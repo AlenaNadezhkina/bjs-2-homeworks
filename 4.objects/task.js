@@ -9,8 +9,10 @@ Student.prototype.setSubject = function(subjectName) {
 }
 Student.prototype.addMarks = function(...marks) {
 	if (!this.marks) {
+		console.log("Студент отчислен");
 		return;
-	} else {
+	}
+	if (!!marksToAdd.length) {
 		this.marks.push(...marks);
 	}
 }
