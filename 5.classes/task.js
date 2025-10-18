@@ -2,7 +2,7 @@ class PrintEditionItem {
 	constructor(name, releaseDate, pagesCount) {
 		this.name = name;
 		this.releaseDate = releaseDate;
-		this.ragesCount = pagesCount;
+		this.pagesCount = pagesCount;
 		this._state = 100;
 		this.type = null;
 	}
